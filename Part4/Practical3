@@ -1,27 +1,25 @@
 //this is created by 21CE126 Kathan Shah
-
-public class Practical4 {  
-  
-    public static void main(String[] args) {  
-          
-           try{    
-                int a[]=new int[5];    
-                //Only the arithmetic exception is handled.
-                //After first exception is encountered catch block
-                //is execuated. Remaining statements in try block are not execuated.
-                a[5]=114/0;  
-                a[6]=6;  
-               }    
-               catch(ArithmeticException e)  
-                  {  
-                   System.out.println("Arithmetic Exception occurs");  
-                  }    
-               catch(ArrayIndexOutOfBoundsException e)  
-                  {  
-                   System.out.println("ArrayIndexOutOfBounds Exception occurs");  
-                  }               
-            finally{
-                System.out.println("Message in finally: There are multpile catch blocks.");
-            }
-    }  
-}  
+//Part-4 Practical-3
+ /*Aim :: Write a program that raises two exceptions. Specify two ‘catch’ clauses for the two exceptions. Each ‘catch’ block handles a different type of exception. For example the exception could be ‘ArithmeticException’ and‘ArrayIndexOutOfBoundsException’. Display a message in the ‘finally’ block. */
+public class Practical3 {
+public static void main(String[] args)
+{
+int[] a=new int[2]; try
+{
+System.out.println("element three of array is :: "+a[3]);//Index not found.ArrayIndexOutOfBoundsException
+}
+catch (ArithmeticException e)
+{
+System.out.println("Exception throw ArithmeticException");
+}
+catch(ArrayIndexOutOfBoundsException e)
+{
+System.out.println("Exception throw ArrayIndexOutOfBoundsException");
+}
+finally//must be called
+{
+a[1]=20;
+System.out.println("Element value: " + a[1]); System.out.println("The finally statement is executed");
+}
+}
+}
