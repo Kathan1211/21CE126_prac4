@@ -1,0 +1,27 @@
+//this is created by 21CE126 Kathan Shah
+
+public class Practical4 {  
+  
+    public static void main(String[] args) {  
+          
+           try{    
+                int a[]=new int[5];    
+                //Only the arithmetic exception is handled.
+                //After first exception is encountered catch block
+                //is execuated. Remaining statements in try block are not execuated.
+                a[5]=114/0;  
+                a[6]=6;  
+               }    
+               catch(ArithmeticException e)  
+                  {  
+                   System.out.println("Arithmetic Exception occurs");  
+                  }    
+               catch(ArrayIndexOutOfBoundsException e)  
+                  {  
+                   System.out.println("ArrayIndexOutOfBounds Exception occurs");  
+                  }               
+            finally{
+                System.out.println("Message in finally: There are multpile catch blocks.");
+            }
+    }  
+}  
