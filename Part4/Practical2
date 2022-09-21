@@ -1,0 +1,21 @@
+//this is created by 21CE126 Kathan Shah
+
+class NegativeNumber extends Exception{
+    public NegativeNumber(String s){
+        super(s);
+    }
+}
+public class Practical2 {
+    
+    public static void main(String[] args) {
+        int a = -2;
+        try{
+                if (a<0){
+                    throw new NegativeNumber("The number cannot be negative.");
+                }
+        }
+        catch (NegativeNumber e){
+            System.out.println(e);
+        }
+    }
+}
